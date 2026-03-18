@@ -7,52 +7,53 @@
     --background: 222 47% 5%;
     --foreground: 210 40% 96%;
 
-    --card: 220 30% 13%;
+    --card: 220 26% 16%;
     --card-foreground: 210 40% 96%;
 
-    --popover: 220 30% 13%;
+    --popover: 220 26% 16%;
     --popover-foreground: 210 40% 96%;
 
     --primary: 192 100% 50%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 220 26% 14%;
+    --secondary: 220 33% 11%;
     --secondary-foreground: 210 40% 96%;
 
-    --muted: 220 26% 14%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 33% 11%;
+    --muted-foreground: 215 18% 62%;
 
-    --accent: 220 26% 14%;
+    --accent: 220 33% 11%;
     --accent-foreground: 210 40% 96%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 30% 24%;
-    --input: 217 30% 24%;
+    --border: 217 28% 24%;
+    --input: 217 28% 24%;
     --ring: 192 100% 50%;
 
     --radius: 0.875rem;
 
-    --sidebar-background: 220 30% 13%;
-    --sidebar-foreground: 210 40% 96%;
-    --sidebar-primary: 192 100% 50%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 220 26% 14%;
-    --sidebar-accent-foreground: 210 40% 96%;
-    --sidebar-border: 217 30% 24%;
-    --sidebar-ring: 192 100% 50%;
-
-    /* Custom Skylife tokens */
+    /* Skylife custom tokens */
     --skylife-cyan: 192 100% 50%;
     --skylife-green: 142 71% 45%;
     --skylife-orange: 38 92% 50%;
     --skylife-red: 0 84% 60%;
     --skylife-gray: 220 9% 46%;
     --skylife-surface: 220 33% 11%;
+    --skylife-text2: 215 18% 62%;
 
     --safe-top: env(safe-area-inset-top, 0px);
     --safe-bot: env(safe-area-inset-bottom, 0px);
+
+    --sidebar-background: 220 26% 16%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 192 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 220 33% 11%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 217 28% 24%;
+    --sidebar-ring: 192 100% 50%;
   }
 }
 
@@ -64,5 +65,42 @@
   body {
     @apply bg-background text-foreground;
     font-family: -apple-system, 'Pretendard', sans-serif;
+    overflow: hidden;
+    height: 100%;
   }
+
+  html {
+    height: 100%;
+  }
+}
+
+/* ── Segmented Control ── */
+.seg-control {
+  @apply flex rounded-[10px] bg-secondary border border-border overflow-hidden;
+}
+.seg-btn {
+  @apply flex-1 py-2.5 text-[13px] font-semibold text-muted-foreground bg-transparent border-none cursor-pointer transition-colors;
+}
+.seg-btn.active {
+  @apply bg-primary text-primary-foreground;
+}
+
+/* ── Status Badges ── */
+.badge-normal  { background: rgba(34,197,94,.15);  color: hsl(var(--skylife-green)); }
+.badge-caution { background: rgba(245,158,11,.15); color: hsl(var(--skylife-orange)); }
+.badge-fault   { background: rgba(239,68,68,.15);  color: hsl(var(--skylife-red)); }
+.badge-unknown { background: rgba(107,114,128,.15); color: hsl(var(--skylife-gray)); }
+
+/* ── Camera Overlay ── */
+.cam-frame {
+  width: 200px;
+  height: 200px;
+  border: 3px solid hsl(var(--primary));
+  border-radius: 20px;
+  box-shadow: 0 0 0 2000px rgba(0,0,0,.45);
+}
+
+/* ── Chip ── */
+.chip {
+  @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs bg-secondary border border-border;
 }
