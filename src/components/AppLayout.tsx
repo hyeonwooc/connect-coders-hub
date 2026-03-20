@@ -35,6 +35,7 @@ export default function AppLayout() {
     }
     if (path === '/floorplan') return { title: '장비 도면', back: null };
     if (path === '/ar') return { title: '📡 AR 뷰', back: null };
+    if (path === '/scan') return { title: '📷 QR 스캔', back: null };
     if (path === '/history') return { title: '점검 이력', back: null };
     return { title: 'Skylife AR 장비관리', back: null };
   };
