@@ -11,6 +11,7 @@ import InspectionDetailPage from "@/pages/InspectionDetailPage";
 import ScanPage from "@/pages/ScanPage";
 import FloorPlanPage from "@/pages/FloorPlanPage";
 import HistoryPage from "@/pages/HistoryPage";
+import ARViewPage from "@/pages/ARViewPage";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();

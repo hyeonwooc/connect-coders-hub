@@ -4,6 +4,7 @@ import { findRack, SKYLIFE_DATA } from '@/lib/data';
 const TABS = [
   { id: 'home', path: '/', icon: '🏠', label: '홈' },
   { id: 'floorplan', path: '/floorplan', icon: '🗺️', label: '도면' },
+  { id: 'ar', path: '/ar', icon: '📡', label: 'AR' },
   { id: 'scan', path: '/scan', icon: '📷', label: '스캔' },
   { id: 'history', path: '/history', icon: '📋', label: '이력' },
 ];
