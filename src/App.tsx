@@ -29,6 +29,7 @@ const App = () => (
             <Route path="/inspect/:rackId" element={<InspectionFormPage />} />
             <Route path="/inspection/:recordId" element={<InspectionDetailPage />} />
             <Route path="/scan" element={<ScanPage />} />
+            <Route path="/ar" element={<ARViewPage />} />
             <Route path="/floorplan" element={<FloorPlanPage />} />
             <Route path="/history" element={<HistoryPage />} />
           </Route>
