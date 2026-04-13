@@ -53,13 +53,29 @@ export default function HomePage() {
       {/* Quick Actions */}
       <div>
         <h2 className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">빠른 액션</h2>
-        <div className="flex gap-3">
-          <button onClick={() => navigate('/scan')} className="flex-1 py-3.5 rounded-[var(--radius)] bg-primary text-primary-foreground font-semibold text-[15px]">
-            📷 QR 스캔
+        <div className="space-y-2">
+          {/* AR 뷰 — 강조 */}
+          <button
+            onClick={() => navigate('/ar')}
+            className="w-full py-4 rounded-[var(--radius)] bg-primary text-primary-foreground font-bold text-[15px] flex items-center justify-center gap-2"
+          >
+            <span className="text-xl">📡</span>
+            AR 뷰 — 장비 위치 확인
           </button>
-          <button onClick={() => navigate('/floorplan')} className="flex-1 py-3.5 rounded-[var(--radius)] bg-secondary text-secondary-foreground font-semibold text-[15px] border border-border">
-            🗺️ 도면 보기
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={() => navigate('/scan')}
+              className="flex-1 py-3.5 rounded-[var(--radius)] bg-secondary text-secondary-foreground font-semibold text-[15px] border border-border"
+            >
+              📷 QR 스캔
+            </button>
+            <button
+              onClick={() => navigate('/floorplan')}
+              className="flex-1 py-3.5 rounded-[var(--radius)] bg-secondary text-secondary-foreground font-semibold text-[15px] border border-border"
+            >
+              🗺️ 도면 보기
+            </button>
+          </div>
         </div>
       </div>
     </div>
