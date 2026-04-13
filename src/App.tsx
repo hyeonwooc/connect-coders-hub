@@ -29,10 +29,11 @@ const App = () => (
             <Route path="/inspect/:rackId" element={<InspectionFormPage />} />
             <Route path="/inspection/:recordId" element={<InspectionDetailPage />} />
             <Route path="/scan" element={<ScanPage />} />
-            <Route path="/ar" element={<ARViewPage />} />
             <Route path="/floorplan" element={<FloorPlanPage />} />
             <Route path="/history" element={<HistoryPage />} />
           </Route>
+          {/* AR은 전체화면이 필요하므로 AppLayout 밖에서 독립 라우트로 처리 */}
+          <Route path="/ar" element={<ARViewPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
